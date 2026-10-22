@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy · INARAADelux</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --primary-light: #eff6ff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+            --radius-lg: 16px;
+            --radius-md: 10px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,217 +30,256 @@
         }
 
         body {
-            background: #f4f7fc;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #1e2a3a;
-            padding: 2rem 1rem;
+            background-color: var(--bg-body);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            padding: 2.5rem 1rem;
             display: flex;
             justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
         }
 
         .policy-container {
-            max-width: 880px;
+            max-width: 840px;
             width: 100%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-            padding: 2.5rem 3rem;
-            transition: all 0.2s ease;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            padding: 3rem 3.5rem;
+            transition: all 0.3s ease;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
             .policy-container {
                 padding: 1.75rem 1.25rem;
+                border-radius: 12px;
             }
         }
 
+        .header-section {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
         h1 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            color: #0b1c2e;
-            margin-bottom: 0.25rem;
-            border-bottom: 3px solid #3a7afe;
-            padding-bottom: 0.5rem;
-            display: inline-block;
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
         .app-name {
-            font-weight: 700;
-            background: linear-gradient(135deg, #1b3a5c, #2d5f9e);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .last-updated {
-            margin-top: 0.75rem;
-            color: #5e6f8d;
-            font-size: 0.95rem;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 1.25rem;
-            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .last-updated::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.2rem;
         }
 
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 600;
-            color: #1e3a5f;
+            color: #1e293b;
             margin-top: 2rem;
             margin-bottom: 0.75rem;
             letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         p {
-            margin-bottom: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 0.975rem;
         }
 
         ul {
-            margin: 0.75rem 0 1.25rem 1.75rem;
+            margin: 0.75rem 0 1.25rem 1.5rem;
+            color: var(--text-muted);
         }
 
         li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.975rem;
+            padding-left: 0.25rem;
+        }
+
+        li strong {
+            color: var(--text-main);
         }
 
         a {
-            color: #2563eb;
+            color: var(--primary-color);
             text-decoration: none;
-            border-bottom: 1px dotted #b0c8f0;
-            transition: border-color 0.2s;
+            font-weight: 500;
+            transition: color 0.2s ease;
         }
 
         a:hover {
-            border-bottom: 1px solid #2563eb;
+            color: var(--primary-hover);
+            text-decoration: underline;
         }
 
         .contact-email {
             font-weight: 600;
-            background: #f0f5ff;
-            padding: 0.15rem 0.5rem;
-            border-radius: 8px;
-            color: #1d4ed8;
+            background: var(--primary-light);
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            color: var(--primary-hover);
             word-break: break-all;
-            border: 1px solid #d6e2ff;
+            border: 1px solid #dbeafe;
+            display: inline-block;
         }
 
         .highlight-box {
-            background: #f8faff;
-            border-left: 4px solid #3a7afe;
-            padding: 1rem 1.5rem;
-            border-radius: 0 12px 12px 0;
-            margin: 1.5rem 0;
+            background: linear-gradient(135deg, #f0f7ff, #f8fafc);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 1.75rem 0;
+            font-size: 0.95rem;
+            color: #1e3a8a;
+        }
+
+        .contact-card {
+            background: var(--bg-body);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin-top: 1rem;
         }
 
         .footer-note {
-            margin-top: 2.5rem;
-            font-size: 0.9rem;
-            color: #64748b;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 1.25rem;
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: #94a3b8;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
             text-align: center;
+            line-height: 1.5;
         }
 
-        .footer-note span {
-            font-weight: 500;
-            color: #334155;
-        }
-
-        .effective-date {
-            font-weight: 500;
+        .footer-note strong {
+            color: var(--text-muted);
         }
     </style>
 </head>
 <body>
     <div class="policy-container">
-        <h1><span class="app-name">INARAADelux</span> Privacy Policy</h1>
-        <div class="last-updated">
-            <strong>Last updated:</strong> October 21, 2026
+        <div class="header-section">
+            <h1><span class="app-name">INARAADelux</span> Privacy Policy</h1>
+            <div class="last-updated">
+                Last updated: October 21, 2026
+            </div>
         </div>
 
-        <p>This Privacy Policy describes how <strong>INARAADelux</strong> ("we", "us", or "our") collects, uses, and shares your information when you use our application, website, or related services (collectively, the "Service"). By accessing or using the Service, you agree to the practices described in this policy.</p>
+        <p>This Privacy Policy describes how <strong>MICANTON LEGACY LLC</strong> ("we", "us", or "our"), operating <strong>INARAADelux</strong>, collects, uses, and shares your information when you use our application, website, or related services (collectively, the "Service"). By accessing or using the Service, you agree to the practices described in this policy.</p>
 
         <div class="highlight-box">
-            <strong>Your privacy matters.</strong> We are committed to transparency and protecting your data. If you have any questions, contact us at <span class="contact-email">inrrploxdelux@gmail.com</span>.
+            <strong>Your privacy matters to us.</strong> We are committed to transparency and protecting your personal data. If you have any questions or privacy concerns, please contact us at <span class="contact-email">micantonlegacyllc@gmail.com</span>.
         </div>
 
         <h2>1. Information We Collect</h2>
-        <p>We collect information to provide and improve our Service. The types of information we collect include:</p>
+        <p>We collect information to provide, maintain, and improve our Service. The types of information we collect include:</p>
         <ul>
-            <li><strong>Information you provide directly:</strong> such as your name, email address, profile details, and any content you submit (e.g., support requests, feedback).</li>
-            <li><strong>Usage data:</strong> interactions with the app, features used, time spent, device type, operating system, and diagnostic logs.</li>
-            <li><strong>Device & network information:</strong> IP address, browser type, approximate location (derived from IP), and unique device identifiers.</li>
-            <li><strong>Cookies & similar technologies:</strong> we may use cookies or local storage to remember preferences and enhance your experience.</li>
+            <li><strong>Information You Provide Directly:</strong> Such as your name, email address, account details, and any communications or support requests you send to us.</li>
+            <li><strong>Usage Data:</strong> Details regarding how you interact with our Service, including features accessed, time spent, diagnostic logs, and performance metrics.</li>
+            <li><strong>Device & Network Information:</strong> IP address, device type, operating system version, browser type, unique device identifiers, and coarse location data.</li>
+            <li><strong>Cookies & Storage Technologies:</strong> We may use cookies, local storage, or similar technologies to remember user preferences and maintain smooth functionality.</li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
-        <p>We use the collected data for the following purposes:</p>
+        <p>We process your data for the following legitimate business purposes:</p>
         <ul>
-            <li>To operate, maintain, and improve the Service and its features.</li>
-            <li>To personalize your experience and deliver relevant content.</li>
-            <li>To communicate with you — including support messages, updates, and transactional notices.</li>
-            <li>To ensure security, prevent fraud, and debug technical issues.</li>
-            <li>To comply with legal obligations and enforce our terms.</li>
+            <li>To operate, maintain, and deliver the core functionality of the Service.</li>
+            <li>To personalize your in-app user experience and retain your preferences.</li>
+            <li>To communicate with you regarding updates, system security alerts, and support requests.</li>
+            <li>To analyze performance, debug issues, detect fraud, and ensure platform safety.</li>
+            <li>To fulfill legal obligations, comply with applicable regulations, and enforce our terms.</li>
         </ul>
 
-        <h2>3. Legal Bases for Processing (GDPR & other applicable laws)</h2>
-        <p>If you are located in the European Economic Area (EEA) or United Kingdom, we process your personal data based on the following legal grounds:</p>
+        <h2>3. Legal Bases for Processing (GDPR & International Laws)</h2>
+        <p>If you are located in the European Economic Area (EEA), UK, or jurisdictions with comparable regulations, we rely on the following legal grounds to process your personal data:</p>
         <ul>
-            <li><strong>Performance of a contract</strong> — to provide the Service you request.</li>
-            <li><strong>Legitimate interests</strong> — to improve our product, maintain security, and understand usage patterns.</li>
-            <li><strong>Consent</strong> — where we ask for your permission (e.g., for optional data collection or marketing).</li>
-            <li><strong>Legal obligation</strong> — when required by law.</li>
+            <li><strong>Contractual Necessity:</strong> To fulfill our obligation to provide the Service to you.</li>
+            <li><strong>Legitimate Interests:</strong> To protect our operations, enhance security, and continuously optimize our product.</li>
+            <li><strong>Consent:</strong> When you provide explicit permission for specific collection or processing activities.</li>
+            <li><strong>Legal Compliance:</strong> To meet applicable legal or regulatory requirements.</li>
         </ul>
 
-        <h2>4. Sharing & Disclosure</h2>
-        <p>We do <strong>not</strong> sell your personal information. We may share data in the following limited circumstances:</p>
+        <h2>4. Sharing & Disclosure of Information</h2>
+        <p>We value your trust and <strong>do not sell</strong> your personal information. We only share data under the following conditions:</p>
         <ul>
-            <li>With trusted service providers who assist in operating the Service (e.g., cloud hosting, analytics) under strict data processing agreements.</li>
-            <li>If required by law, regulation, or legal process (such as a court order or subpoena).</li>
-            <li>In connection with a merger, acquisition, or sale of assets — we will provide notice before your data is transferred.</li>
-            <li>With your explicit consent or at your direction.</li>
+            <li><strong>Service Providers:</strong> With vetted third-party vendors who assist with hosting, customer support, and analytics under standard confidentiality agreements.</li>
+            <li><strong>Legal Obligations:</strong> When required by legal process, subpoena, law enforcement request, or court order.</li>
+            <li><strong>Business Transfers:</strong> In connection with a corporate merger, acquisition, restructuring, or asset sale, with prior notification to users.</li>
+            <li><strong>With Your Consent:</strong> When you give us explicit permission to share information for a designated purpose.</li>
         </ul>
 
         <h2>5. Data Retention</h2>
-        <p>We retain your information only as long as necessary for the purposes described in this policy, unless a longer retention period is required or permitted by law. We may keep certain data for legitimate business purposes (e.g., security, fraud prevention) or to meet legal obligations.</p>
+        <p>We retain your personal information only as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law (such as for regulatory compliance, legal defense, or auditing purposes).</p>
 
-        <h2>6. Your Rights & Choices</h2>
-        <p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
+        <h2>6. Your Rights & Privacy Choices</h2>
+        <p>Depending on your jurisdiction, you may hold specific rights regarding your personal information:</p>
         <ul>
-            <li><strong>Access</strong> — request a copy of the data we hold about you.</li>
-            <li><strong>Correction</strong> — update or rectify inaccurate data.</li>
-            <li><strong>Deletion</strong> — ask us to erase your personal information, subject to legal exceptions.</li>
-            <li><strong>Restriction / objection</strong> — limit or object to certain processing.</li>
-            <li><strong>Data portability</strong> — receive your data in a structured, machine-readable format.</li>
-            <li><strong>Withdraw consent</strong> — where processing is based on consent, you may withdraw it anytime.</li>
+            <li><strong>Access & Portability:</strong> Request a copy of the personal information we maintain about you.</li>
+            <li><strong>Correction:</strong> Request updates or corrections to inaccurate or incomplete data.</li>
+            <li><strong>Deletion:</strong> Request the deletion of your personal data, subject to legal limits.</li>
+            <li><strong>Restriction & Objection:</strong> Limit or object to certain forms of data processing.</li>
+            <li><strong>Withdrawal of Consent:</strong> Withdraw consent previously provided at any time without affecting prior lawful processing.</li>
         </ul>
-        <p>To exercise any of these rights, email us at <span class="contact-email">inrrploxdelux@gmail.com</span>. We will respond within 30 days. We may need to verify your identity before fulfilling your request.</p>
+        <p>To exercise any of these rights, please submit a request to <span class="contact-email">micantonlegacyllc@gmail.com</span>. We will respond to all valid requests within 30 days and may verify your identity before proceeding.</p>
 
         <h2>7. International Data Transfers</h2>
-        <p>Your information may be processed and stored in servers located outside your country of residence, including the United States and other jurisdictions. Where we transfer data internationally, we rely on appropriate safeguards (such as Standard Contractual Clauses) to ensure your data is protected.</p>
+        <p>Your information may be transferred to and processed on servers located in jurisdictions outside your home country. We ensure adequate legal protections—such as Standard Contractual Clauses (SCCs)—are implemented to safeguard your personal data across borders.</p>
 
         <h2>8. Children's Privacy</h2>
-        <p>Our Service is not directed to individuals under the age of 13 (or the applicable minimum age in your country). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us immediately, and we will take steps to delete such information.</p>
+        <p>Our Service is not directed toward children under 13 years of age (or the local legal minimum age). We do not knowingly collect personal data from children. If you become aware that a child has provided us with personal information, please notify us immediately so we can promptly remove it.</p>
 
-        <h2>9. Security</h2>
-        <p>We implement reasonable technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no internet transmission or storage method is 100% secure — we encourage you to use strong passwords and enable two-factor authentication where available.</p>
+        <h2>9. Data Security</h2>
+        <p>We implement robust technical and organizational measures to safeguard your data against unauthorized access, loss, misuse, or alteration. While we strive to protect your privacy, no online transmission or data storage is completely risk-free, and we encourage you to protect your account credentials.</p>
 
-        <h2>10. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of material changes by posting the new policy on this page and updating the "Last updated" date at the top. In some cases, we may provide additional notice (e.g., an in-app notification or email). Your continued use of the Service after changes constitute acceptance of the revised policy.</p>
+        <h2>10. Updates to This Privacy Policy</h2>
+        <p>We may update this policy periodically to reflect changes in our service or legal obligations. We will notify you of material changes by updating the "Last updated" date above or posting an in-app announcement. Continued use of the Service signifies acceptance of the revised policy.</p>
 
         <h2>11. Contact Us</h2>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out to our Data Protection team:</p>
-        <p style="margin-top: 0.75rem;">
-            <strong>INARAADelux</strong><br>
-            Privacy Officer<br>
-            Email: <span class="contact-email">inrrploxdelux@gmail.com</span><br>
-            We aim to respond to all legitimate requests within 30 days.
-        </p>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact our Data Protection team:</p>
+        <div class="contact-card">
+            <strong>MICANTON LEGACY LLC</strong><br>
+            Privacy & Data Protection Team<br>
+            Email: <a href="mailto:micantonlegacyllc@gmail.com" class="contact-email" style="margin-top: 0.4rem;">micantonlegacyllc@gmail.com</a>
+        </div>
 
         <div class="footer-note">
-            <span>© 2026 INARAADelux · All rights reserved.</span><br>
-            This policy is effective as of <span class="effective-date">October 21, 2026</span>.
+            <strong>© 2026 MICANTON LEGACY LLC · All rights reserved.</strong><br>
+            INARAADelux Privacy Policy · Effective Date: October 21, 2026
         </div>
     </div>
 </body>
